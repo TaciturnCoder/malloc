@@ -1,0 +1,111 @@
+<!--
+[//]: # ( ------------------------------------------------------------------ {c)
+[//]: # ( COPYRIGHT 2022 Dwij Bavisi <dwijbavisi@gmail.com>                  {c)
+[//]: # ( Licensed under:                                                    {c)
+[//]: # (     Taciturn Coder's `License to Hack` License                     {c)
+[//]: # (     TC's L2H 1.0                                                   {c)
+[//]: # ( A copy of the License may be obtained from:                        {c)
+[//]: # (     https://TaciturnCoder.github.io/TCsL2H/legalcode/1.0           {c)
+[//]: # ( See the License for the permissions and limitations.               {c)
+[//]: # ( ------------------------------------------------------------------ {c)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>malloc</title>
+
+        <link rel="stylesheet" href="src/Styles/Main.css">
+        <link rel="stylesheet" href="src/Styles/Colors.css">
+
+        <script src="src/Scripts/machine.js"></script>
+        <script src="src/Scripts/power.js"></script>
+
+        <script src="src/core/helper.js"></script>
+        <script src="src/core/first.js"></script>
+        <script src="src/core/next.js"></script>
+        <script src="src/core/best.js"></script>
+        <script src="src/core/worst.js"></script>
+
+        <script src="src/Scripts/create.js"></script>
+        <script src="src/Scripts/end_process.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <span>malloc - Demonstration of dynamic memory management</span>
+            <span>algorithms using bit maps</span>
+
+            <span>Main Memory: </span>
+            <span>
+                <input type="text" value="1024" id="main_memory" />
+                KiB
+            </span>
+
+            <span>Block Size: </span>
+            <span>
+                <input type="text" value="4" id="block_size" />
+                KiB
+            </span>
+
+            <span>Kernel Space: </span>
+            <span>
+                <input type="text" value="32" id="kernel_space" />
+                KiB
+            </span>
+        </header>
+        <main>
+            <div id="bitmap"></div>
+            <div id="message"></div>
+        </main>
+        <footer>
+            <span>
+                <select name="act" id="act" disabled>
+                    <optgroup label="System">
+                        <option value="reset">Reset</option>
+                        <option value="shutdown">Shutdown</option>
+                    </optgroup>
+                    <optgroup label="Process" id="end_process">
+                    </optgroup>
+                </select>
+            </span>
+            <button onclick="act()">Perform Action</button>
+
+            <span id="last_fit_block"></span>
+            <span style="text-align: right;">Available on:</span>
+
+            <span>By:
+                <a href="https://github.com/TaciturnCoder">Taciturn Coder</a>
+                (a.k.a. <a href="https://github.com/DwijBavisi">Dwij Bavisi</a>)
+            </span>
+            <span>
+                <a href="https://github.com/TaciturnCoder/malloc">https://github.com/TaciturnCoder/malloc</a>
+            </span>
+
+            <span>
+                <select name="algo" id="algo" disabled>
+                    <optgroup label="Algorithm">
+                        <option value="first">First Fit</option>
+                        <option value="next">Next Fit</option>
+                        <option value="best">Best Fit</option>
+                        <option value="worst">Worst Fit</option>
+                    </optgroup>
+                    <!-- <optgroup label="User Defnined">
+                        <option value="user">User Fit</option>
+                    </optgroup> -->
+                </select>
+            </span>
+            <span></span>
+
+            <span>
+                <input type="text" style="width: 100%;" id="command" disabled />
+            </span>
+            <button id="create" disabled onclick="create()">Add Process</button>
+        </footer>
+    </body>
+
+</html>
