@@ -15,8 +15,8 @@ malloc (version:1, patch:0, draft:0)
 
 | Version | Patch | Draft | Date | Contributor | Description |
 | --- | --- | --- | --- | --- | --- |
-| 1 | 0 | 0 | 04/08/2022 | [Dwij Bavisi][0] | Hacking begins! |
-| 1 | 0 | 0 | 04/08/2022 | [Taciturn Coder][1] | Create Repository |
+| 1 | 0 | 0 | 22/08/2022 | [Dwij Bavisi][0] | Initial commit |
+| 1 | 0 | 0 | 22/08/2022 | [Taciturn Coder][1] | Create Repository |
 
 [0]:https://github.com/DwijBavisi
 [1]:https://github.com/TaciturnCoder
