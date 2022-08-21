@@ -12,10 +12,15 @@
 malloc (version:1, patch:0, draft:0)
 
 ## Usage
+1. Use without installing:
+Project deployed here: [https://taciturncoder.github.io/malloc/][0]
+
 1. Get this repository using
 ```
 git clone "https://github.com/TaciturnCoder/malloc.git"
 ```
+
+2. Open `index.html` in your browser
 
 ## Contributing
 I'm not expecting contributions, but suggestions are welcome,
@@ -25,3 +30,5 @@ Also see: past [contributions](Contributions.md)
 
 ## License
 See the [License](License.md) for the permissions and limitations.
+
+[0]: https://taciturncoder.github.io/malloc/
